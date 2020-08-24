@@ -1,20 +1,10 @@
 pipeline {
-  agent {
-    docker {
-      image 'gcc:4.9'
-    }
-
-  }
+  agent any
   stages {
     stage('Build') {
-      agent {
-        docker {
-          image 'gcc:4.9'
-        }
-
-      }
+      agent any
       steps {
-        sh 'make'
+        sh 'ls'
       }
     }
 
